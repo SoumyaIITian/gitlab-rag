@@ -56,7 +56,7 @@ def get_answer_from_gemini(user_query: str, chat_history: list = None) -> str:
         retriever = vectordb.as_retriever(search_kwargs={"k": 5})
 
         model = ChatGoogleGenerativeAI(
-            model=os.getenv("GEMINI_MODEL", "gemini-2.0-flash"), 
+            model=os.getenv("GEMINI_MODEL", "gemini-2.5-flash"), 
             temperature=0,
             max_tokens=1024
         )
